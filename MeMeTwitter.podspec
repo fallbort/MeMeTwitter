@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
                    1.MeMeTwitter
                    DESC
 
-  spec.homepage     = "https://bitbucket.org/funplus/streaming-client-compents"
+  spec.homepage     = "https://github.com/fallbort/MeMeTwitter"
 
   spec.license      = "MIT"
 #  spec.license      = { :type => "MIT", :file => "LICENSE.md" }
@@ -28,13 +28,13 @@ Pod::Spec.new do |spec|
    spec.platform     = :ios, "10.0"
    spec.ios.deployment_target = "10.0"
 
-  spec.source       = { :git => "https://bitbucket.org/funplus/streaming-client-compents.git",:tag => "MeMeTwitter_#{spec.version}" }
+  spec.source       = { :git => "https://github.com/fallbort/MeMeTwitter.git",:tag => "MeMeTwitter_#{spec.version}" }
 
   spec.swift_version = '5.0'
   spec.static_framework = true
 
   spec.source_files  = "Source/**/*.{h,m,swift}","*.{h,m,swift}"
-  spec.public_header_files = 'Source/**/*.{h}'
+  # spec.public_header_files = 'Source/**/*.{h}'
   # spec.frameworks = "MediaPlayer"
   # spec.vendored_frameworks    = "Frameworks/3.1.2/AgoraRtcKit.framework"
 end

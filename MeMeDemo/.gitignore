@@ -1,0 +1,6 @@
+*.xcworkspace
+*.lock
+Pods/
+
+
+

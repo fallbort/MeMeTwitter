@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MeMeDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="shareLabel" destination="iYd-In-9OO" id="O3k-H4-KWQ"/>
+                <outlet property="statusLabel" destination="Ylk-3s-7UB" id="QhB-w4-QuD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSu-01-i9q">
+                    <rect key="frame" x="169.5" y="383" width="75" height="30"/>
+                    <state key="normal" title="登录twitter"/>
+                    <connections>
+                        <action selector="loginClickedWithSender:" destination="-1" eventType="touchUpInside" id="pRT-Uz-Nyq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZt-ki-bF5">
+                    <rect key="frame" x="161.5" y="433" width="91" height="30"/>
+                    <state key="normal" title="分享到twitter"/>
+                    <connections>
+                        <action selector="shareClickedWithSender:" destination="-1" eventType="touchUpInside" id="XOP-Qr-zHW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylk-3s-7UB">
+                    <rect key="frame" x="136" y="337.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYd-In-9OO">
+                    <rect key="frame" x="236" y="337.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iYd-In-9OO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="16p-GO-aeJ"/>
+                <constraint firstItem="iYd-In-9OO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="50" id="Goi-eg-HUo"/>
+                <constraint firstItem="nSu-01-i9q" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="Mr2-fa-7KJ"/>
+                <constraint firstItem="Ylk-3s-7UB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="Nw0-t9-csM"/>
+                <constraint firstItem="Ylk-3s-7UB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-50" id="ahU-6z-o6Z"/>
+                <constraint firstItem="OZt-ki-bF5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gnT-kA-4oj"/>
+                <constraint firstItem="OZt-ki-bF5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qC8-Vm-5Mj"/>
+                <constraint firstItem="nSu-01-i9q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vda-Kl-KoI"/>
+            </constraints>
+            <point key="canvasLocation" x="-145" y="109"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

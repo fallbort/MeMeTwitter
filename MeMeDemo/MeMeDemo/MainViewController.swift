@@ -34,11 +34,13 @@ class MainViewController: UIViewController {
     @IBAction func shareClicked(sender:UIButton?) {
         let data = MeMeTwitterShareData()
         data.text = "11111"
-        MeMeTwitter.shared.share(with: self, data: data) { [weak self] (ret) in
-            if ret == true {
-                self?.shareLabel?.text = "分享成功"
-            }else{
-                self?.shareLabel?.text = "分享失败"
+        MeMeTwitter.shared.share(with: self, data: data) { [weak self] (stage,ret)  in
+            if stage == .end {
+                if ret == true {
+                    self?.shareLabel?.text = "分享成功"
+                }else{
+                    self?.shareLabel?.text = "分享失败"
+                }
             }
         }
     }

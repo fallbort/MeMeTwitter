@@ -340,7 +340,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = chat.meme.inke;
+				PRODUCT_BUNDLE_IDENTIFIER = net.z1j.www.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -364,7 +364,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = chat.meme.inke;
+				PRODUCT_BUNDLE_IDENTIFIER = net.z1j.www.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

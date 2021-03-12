@@ -9,12 +9,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MeMeTwitter"
-  spec.version      = "1.0.0"
-  spec.summary      = "MeMeTwitter Modules"
+  spec.version      = "1.0.1"
+  spec.summary      = "MeMeTwitter:对官方swifter代码的二次封装，更方便的进行twitter的登录和分享，已用于商业项目中。"
 
   spec.description  = <<-DESC
                    MeMeTwitter Modules,contain,
                    1.MeMeTwitter
+                   2.swifter
                    DESC
 
   spec.homepage     = "https://github.com/fallbort/MeMeTwitter"

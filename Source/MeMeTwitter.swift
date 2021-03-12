@@ -43,9 +43,9 @@ public class MeMeTwitter : NSObject {
     
     public func application(_ application: UIApplication, open url: URL, options: [AnyHashable : Any] = [:]) -> Bool {
         if Self.twitterAppInstalled() {
-            Swifter.handleOpenURL(url,callbackURL: URL.init(string: callbackUrlStr)!, isSSO: true)
+            Swifter.handleOpenURL(url,callbackURL: URL.init(string: getCallbackUrlStr(withSufix: true))!, isSSO: true)
         } else {
-            Swifter.handleOpenURL(url,callbackURL: URL.init(string: callbackUrlStr)!)
+            Swifter.handleOpenURL(url,callbackURL: URL.init(string: getCallbackUrlStr(withSufix: true))!)
         }
         return true
     }
@@ -133,7 +133,7 @@ public class MeMeTwitter : NSObject {
     }
 
     private func authorizeWithSSO(with: UIViewController?,complete:((_ :Credential.OAuthAccessToken?,_ :Error?)->())?) {
-        let callbackUrl = URL(string: callbackUrlStr)!
+        let callbackUrl = URL(string: getCallbackUrlStr(withSufix: false))!
         if let swifter = swifter {
             swifter.authorizeSSO(callbackURL: callbackUrl) { (token) in
                 complete?(token,nil)
@@ -150,6 +150,14 @@ public class MeMeTwitter : NSObject {
             return UIApplication.shared.canOpenURL(url)
         } else {
             return false
+        }
+    }
+    
+    private func getCallbackUrlStr(withSufix:Bool) -> String {
+        if withSufix == true {
+            return callbackUrlStr.hasSuffix("://") == true ? callbackUrlStr : callbackUrlStr + "://"
+        }else{
+            return callbackUrlStr.hasSuffix("://") == true ? (callbackUrlStr as NSString).substring(to: callbackUrlStr.count - 3) : callbackUrlStr
         }
     }
     

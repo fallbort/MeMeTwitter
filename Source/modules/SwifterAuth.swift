@@ -176,7 +176,7 @@ extension Swifter {
 
     @discardableResult
     class func handleOpenURL(_ url: URL, callbackURL: URL, isSSO: Bool = false) -> Bool {
-        guard url.absoluteString.hasPrefix(callbackURL.absoluteString) else {
+        guard url.absoluteString.lowercased().hasPrefix(callbackURL.absoluteString.lowercased()) else {
             return false
         }
         
